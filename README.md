@@ -50,7 +50,7 @@ git remote -v
 git remote remove origin
 ```
 
-选择创建好的空仓库，提交代码
+选择创建好的空仓库，提交代码（这个代码片段在创建仓库后会提供，需要自行copy）
 
 ```bash
 git remote add <远程源名称> <仓库链接> 
