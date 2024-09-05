@@ -8,6 +8,8 @@
 
 ## 初始化
 
+先修改 **文件夹名称** 和 **package.json的项目名** 为你自己的项目名称
+
 ```sh
 npm install
 ```
@@ -32,13 +34,39 @@ npm run lint
 
 
 
+## 修改为自己的远程源
+
+
+
+`git remote -v` 查看远程源列表
+
+```bash
+git remote -v
+```
+
+`git remote remove <远程源名称>` 删除指定的远程源，这里是origin
+
+```bash
+git remote remove origin
+```
+
+选择创建好的空仓库，提交代码
+
+```bash
+git remote add <远程源名称> <仓库链接> 
+git branch -M <分支名称，一般为main>
+git push -u <远程源名称> <分支名称，一般为main>
+```
+
+
+
 ## 额外安装的插件
 
 1.@types/node
 
 `@types/node` 是一个 TypeScript 类型定义包，为 Node.js 的核心模块提供 TypeScript 类型声明。它让 TypeScript 编译器了解 Node.js 的 API 及其类型，从而提供类型检查和自动补全功能。
 
-> vscode要求加的,加了就不报错
+> vscode要求加的,加了不会在某些情况下报路径错误
 
 ```bash
 npm install -D @types/node
@@ -66,7 +94,7 @@ vue3向下只能支持到ES6（ECMAScript 2015）,有支持es6的需求可以参
 
 [npm查看已安装的包](https://blog.csdn.net/jiaoqi6132/article/details/130146145)
 
-参考了黑马的人力资源项目创建的目录:
+参考了黑马的人力资源项目创建的目录，添加了.gitkeep保证目录上传，拉取后自行删除
 
 ```bash
 ├── src                        # 源代码目录
