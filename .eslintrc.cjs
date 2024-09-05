@@ -33,6 +33,13 @@ module.exports = {
     // 代码尾部不使用分号（`never`，或使用 `always`），否则将会抛出错误
     semi: ['error', 'never'],
 
+    /**
+     * 'no-unused-vars': 这是 ESLint 中的一个规则，用来检测代码中声明了但没有使用的变量。
+     *  未使用的变量通常是代码中冗余的部分，可能会导致代码混乱或性能问题。
+     *  0: 这个值表示关闭这个规则的检查。在 ESLint 配置中：
+     *  0 表示禁用该规则。
+     *  1 或 'warn' 表示将其设置为警告。
+     *  2 或 'error' 表示将其设置为错误（即代码检查失败）。 */
     'no-unused-vars': 0,
 
     // 关闭命名检测
@@ -41,19 +48,25 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
+        // 代码尾部不使用分号
         semi: false,
-        htmlWhitespaceSensitivity: 'ignore', //对HTML全局空白不敏感
-        vueIndentScriptAndStyle: false, //不对vue中的script及style标签缩进
+        //对HTML全局空白不敏感
+        htmlWhitespaceSensitivity: 'ignore',
+        //不对vue中的script及style标签缩进
+        vueIndentScriptAndStyle: false,
         singleAttributePerLine: true,
         endOfLine: 'auto',
-
-        singleQuote: true, // 保持单引号
-        quoteProps: 'as-needed', // 按需使用引号
+        // 保持单引号
+        singleQuote: true,
+        // 按需使用引号
+        quoteProps: 'as-needed',
+        //不使用tab符号,会把tab转化成空格
         useTabs: false
       }
     ]
   },
   settings: {
+    //eslint-import-resolver-alias的配置项
     'import/resolver': {
       alias: {
         //设置路径别名
