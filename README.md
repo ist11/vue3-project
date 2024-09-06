@@ -2,6 +2,8 @@
 
 自用的vue3初始化项目框架
 
+git@github.com:ist11/vue3-project.git
+
 ## ide套件
 
 [VSCode](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
@@ -60,7 +62,7 @@ git push -u <远程源名称> <分支名称，一般为main>
 
 
 
-## 额外安装的插件
+## 已经额外安装的插件
 
 1.@types/node
 
