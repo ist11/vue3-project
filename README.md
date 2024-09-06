@@ -90,6 +90,8 @@ export default defineConfig({
 
 在`.env.development` 中设置了默认启动的浏览器为chrome
 
+> 24.9.6 vscode在ctrl+单击打开链接时会打开两个浏览器，不知道原因
+
 ![image-20240906105202493](README.assets/image-20240906105202493.png)
 
 添加.local后缀可以让git忽略这个配置文件
