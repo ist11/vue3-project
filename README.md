@@ -144,7 +144,31 @@ export default defineConfig({
 >
 > 通过不同的模式，Vite 可以加载不同的环境变量配置，实现针对不同环境的定制化处理。
 
-
+> 是的，Vite 可以像 Vue CLI 一样配置监听 `localhost` 和本机局域网 IP。你可以通过设置 Vite 的 `server.host` 和 `server.watch` 选项来实现这一点。
+>
+> ### 配置方法
+>
+> 在 `vite.config.js` 中，你可以配置如下选项：
+>
+> ```js
+> export default {
+>   server: {
+>     host: true, // 设置为 true 来监听本机的局域网 IP
+>     port: 3000, // 端口号
+>     open: true, // 自动打开浏览器
+>   }
+> }
+> ```
+>
+> ### 说明
+>
+> - `host: true`：此配置会让 Vite 监听 `localhost` 和本机的局域网 IP，和 Vue CLI 的默认行为一致。这样你可以通过 `localhost` 或者局域网 IP 来访问开发服务器。
+> - `port`：配置端口。
+> - `open`：自动在浏览器中打开开发服务器页面。
+>
+> 这样配置后，Vite 会同时监听本机的 `localhost` 和局域网 IP，你可以在浏览器中通过两者之一来访问项目。
+>
+> 如果你需要更细粒度的控制，比如仅监听特定 IP，你可以将 `host` 设置为特定的 IP 地址，例如 `host: '192.168.1.100'` 这种形式。
 
 ## 已经额外安装的插件
 
