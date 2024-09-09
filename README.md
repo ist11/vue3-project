@@ -152,11 +152,11 @@ export default defineConfig({
 >
 > ```js
 > export default {
->   server: {
->     host: true, // 设置为 true 来监听本机的局域网 IP
->     port: 3000, // 端口号
->     open: true, // 自动打开浏览器
->   }
+>       server: {
+>            host: true, // 设置为 true 来监听本机的局域网 IP
+>            port: 3000, // 端口号
+>            open: true, // 自动打开浏览器
+>       }
 > }
 > ```
 >
@@ -170,7 +170,23 @@ export default defineConfig({
 >
 > 如果你需要更细粒度的控制，比如仅监听特定 IP，你可以将 `host` 设置为特定的 IP 地址，例如 `host: '192.168.1.100'` 这种形式。
 
-## 已经额外安装的插件
+## 查看已安装的包
+
+查看生产环境（新安装包时默认生产环境安装，除非指定-D）
+
+```bash
+npm ls --depth 0 --prod
+```
+
+查看开发环境
+
+```bash
+npm ls
+```
+
+
+
+## 已经额外安装的包
 
 1.@types/node
 
@@ -204,7 +220,65 @@ https://prazdevs.github.io/pinia-plugin-persistedstate/guide/config.html
 
 
 
+## 可选安装的包
 
+
+
+vite脚手架专用的mock
+
+```bash
+npm i -D vite-plugin-mock
+```
+
+mock随机数据
+
+```bash
+npm i -D mockjs
+```
+
+axios
+
+```bash
+npm i axios
+```
+
+自动引入api和模块
+
+```bash
+npm install -D unplugin-vue-components unplugin-auto-import
+```
+
+elementPlus
+
+```bash
+npm install element-plus
+```
+
+dayjs 日期处理库
+
+```bash
+npm i dayjs
+```
+
+@vueuse/core 基于 Composition API 的实用函数集合
+
+```bash
+npm i @vueuse/core
+```
+
+sass 
+
+```bash
+ npm i -D sass
+```
+
+
+
+
+
+
+
+…
 
 ## VSCode的设置项
 
@@ -228,23 +302,25 @@ vue3向下只能支持到ES6（ECMAScript 2015）,有支持es6的需求可以参
 
 [npm查看已安装的包](https://blog.csdn.net/jiaoqi6132/article/details/130146145)
 
-参考了黑马的人力资源项目创建的目录，添加了.gitkeep保证目录上传，拉取后自行删除
+参考了黑马的项目创建的目录，添加了.gitkeep保证目录上传，拉取后自行删除
 
 ```bash
 ├── src                        # 源代码目录
 │   ├── api                    # 所有请求
 │   ├── assets                 # 主题 字体等静态资源
 │   ├── components             # 全局公用组件
+│   ├── composables            # 全局公用方法,的有状态的逻辑函数
+│   ├── directives             # 自定义全局指令
 │   ├── icons                  # 项目所有 svg icons
 │   ├── layout                 # 全局 layout
 │   ├── router                 # 路由
 │   ├── store                  # 全局 store管理
 │   ├── styles                 # 全局样式
-│   ├── utils                  # 全局公用方法
+│   ├── utils                  # 全局公用方法,无状态的逻辑函数
 │   ├── views                  # views 所有页面
 │   ├── App.vue                # 入口页面
 │   ├── main.js                # 入口文件 加载组件 初始化等
-│   └── permission.js          # 权限管理
+│   ├── permission.js          # 权限管理
 │   └── settings.js            # 配置文件
 
 ```
@@ -253,6 +329,8 @@ vue3向下只能支持到ES6（ECMAScript 2015）,有支持es6的需求可以参
 > permission.js(权限)，主要负责路由导航守卫
 >
 > 这里只提供空文件,根据实际情况编写内容
+>
+> [组合式函数Composables](https://blog.csdn.net/jiaoyangdetian/article/details/137070743)
 
 ## 说明
 
