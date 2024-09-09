@@ -54,7 +54,8 @@ module.exports = {
         htmlWhitespaceSensitivity: 'ignore',
         //不对vue中的script及style标签缩进
         vueIndentScriptAndStyle: false,
-        singleAttributePerLine: true,
+        //不强制每行使用单个属性
+        singleAttributePerLine: false,
         endOfLine: 'auto',
         // 保持单引号
         singleQuote: true,

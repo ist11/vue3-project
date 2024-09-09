@@ -192,6 +192,16 @@ npm i eslint-import-resolver-alias -D
 
 
 
+## VSCode的设置项
+
+> ![image-20240909105559137](README.assets/image-20240909105559137.png)
+>
+> false:阻止在函数名与括号之间添加空格
+
+```
+"javascript.format.insertSpaceBeforeFunctionParenthesis": false
+```
+
 
 
 ## 参考
