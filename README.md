@@ -190,6 +190,20 @@ npm install -D @types/node
 npm i eslint-import-resolver-alias -D
 ```
 
+3.pinia-plugin-persistedstate
+
+pinia持久化
+
+```bash
+npm i pinia-plugin-persistedstate
+```
+
+配置说明： 
+
+https://prazdevs.github.io/pinia-plugin-persistedstate/guide/config.html
+
+
+
 
 
 ## VSCode的设置项
